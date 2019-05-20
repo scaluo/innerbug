@@ -1,0 +1,2 @@
+FLASK_APP=innerbug
+FLASK_ENV=development
