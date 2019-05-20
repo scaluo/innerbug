@@ -73,7 +73,7 @@ class Bug(db.Model):
     user_id = db.Column(db.Integer,db.ForeignKey('user.id'))
     user = db.relationship('User',back_populates='bugs')    
     status = db.Column(db.Integer,default=0)
-    otime = db.Column(db.DateTime,default=datetime.utcnow)
+    otime = db.Column(db.DateTime,default=datetime.utcnow,onupdate=datetime.utcnow)
     def to_json(self):
         dict = self.__dict__
         if "_sa_instance_state" in dict:
