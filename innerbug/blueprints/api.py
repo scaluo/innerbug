@@ -141,7 +141,7 @@ def setbugstatus():
     status = request.form.get('status')
     bug = Bug.query.get(id)
     bug.status=status
-    bug.otime = datetime.utcnow
+    
     db.session.commit()
     return jsonify({"info":"修改成功"})
 
