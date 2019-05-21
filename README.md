@@ -2,7 +2,7 @@
 
 
 #### 项目说明  
-1、后端用python flask
+1、后端用python flask  
 2、前端用vue+element-ui
 
 #### 安装
@@ -13,7 +13,7 @@ $pip install pipenv（已安装pipenv请忽略)
 $pipenv --three  
 $pipenv install  
 $pipenv shell  
-$flask initdb
+$flask initdb  
 $flask run  
 
 前端配置  
