@@ -56,10 +56,10 @@ export default {
     data() {
         return {
             tableData:[],
-            prjid:0,
             loading:true
         }
     },
+    props:['prjid'],
     created(){
       
         this.initData()
@@ -84,7 +84,6 @@ export default {
           return "padding:0px"
         },
         async initData(){
-            this.prjid=this.$route.params.id
             this.tableData = await getbuglist(this.prjid)
             this.loading = false;
          
@@ -103,9 +102,6 @@ export default {
       }
     },
     watch:{
-        $route(){
-            this.prjid=this.$route.params.id
-        },
         prjid(){
             this.initData()
         }
