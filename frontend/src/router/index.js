@@ -102,9 +102,10 @@ const router =  new Router({
               }
           },
           {
-              path:'/buglist/:id',
+              path:'/buglist/:prjid',
               name:'BugList',
               component:BugList,
+              props:true,
               meta:{
                 isLogin:true,
                 title:'BUG列表'

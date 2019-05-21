@@ -3,7 +3,7 @@
 
 #### 项目说明  
 1、后端用python flask  
-2、前端用vue+element-ui
+2、前端用vue+element-ui  
 
 #### 安装
 支持python3+版本  
