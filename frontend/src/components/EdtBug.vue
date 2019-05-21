@@ -4,7 +4,7 @@
   <el-col :span="12" :offset="6">
           <h2>BUG当前状态：{{form.status|statusdesc}}</h2>
 
-          <el-card class="box-card">
+          <el-card class="box-card"  v-loading="loading">
           <el-form :label-position="labelPosition" ref="form" :model="form" label-width="80px">
               <el-form-item label="错误标题" prop="title">
                     <el-input v-model="form.title"></el-input>
@@ -53,6 +53,7 @@ import {getbug,setbugstatus,updatebug,getprojectlist,delbug} from '../service/ge
 export default {
     data(){
         return {
+            loading:true,
             labelPosition:'left',
             form:{
                 id:0,
@@ -86,6 +87,7 @@ export default {
             _this.form.level = rep.level
             _this.form.prj = rep.project_id
             _this.form.prjs = await getprojectlist()
+            _this.loading = false
         },
         async onSetStatus(status){
             let _this=this

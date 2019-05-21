@@ -102,6 +102,7 @@ export default {
       }
     },
     watch:{
+        
         prjid(){
             this.initData()
         }

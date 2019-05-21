@@ -57,7 +57,7 @@ export default {
                 {
                 console.log(rep)
                 _this.$store.dispatch('UserLogin',rep)
-                _this.$router.push('/mainproject')
+                _this.$router.push('/mainpage')
                 }
             }
          }
